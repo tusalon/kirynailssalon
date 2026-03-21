@@ -1,22 +1,22 @@
-// sw.js - Service Worker para Salon bella
+// sw.js - Service Worker para Kiry's nail salón
 
-const CACHE_NAME = 'salon-bella-v1';
+const CACHE_NAME = 'kirys-nail-salon-v1';
 const urlsToCache = [
-  '/bellasalon/',
-  '/bellasalon/index.html',
-  '/bellasalon/admin.html',
-  '/bellasalon/admin-login.html',
-  '/bellasalon/setup-wizard.html',
-  '/bellasalon/editar-negocio.html',
-  '/bellasalon/manifest.json',
-  '/bellasalon/icons/icon-72x72.png',
-  '/bellasalon/icons/icon-96x96.png',
-  '/bellasalon/icons/icon-128x128.png',
-  '/bellasalon/icons/icon-144x144.png',
-  '/bellasalon/icons/icon-152x152.png',
-  '/bellasalon/icons/icon-192x192.png',
-  '/bellasalon/icons/icon-384x384.png',
-  '/bellasalon/icons/icon-512x512.png'
+  '/kirynailssalon/',
+  '/kirynailssalon/index.html',
+  '/kirynailssalon/admin.html',
+  '/kirynailssalon/admin-login.html',
+  '/kirynailssalon/setup-wizard.html',
+  '/kirynailssalon/editar-negocio.html',
+  '/kirynailssalon/manifest.json',
+  '/kirynailssalon/icons/icon-72x72.png',
+  '/kirynailssalon/icons/icon-96x96.png',
+  '/kirynailssalon/icons/icon-128x128.png',
+  '/kirynailssalon/icons/icon-144x144.png',
+  '/kirynailssalon/icons/icon-152x152.png',
+  '/kirynailssalon/icons/icon-192x192.png',
+  '/kirynailssalon/icons/icon-384x384.png',
+  '/kirynailssalon/icons/icon-512x512.png'
 ];
 
 // ============================================
@@ -108,7 +108,7 @@ self.addEventListener('fetch', event => {
           }
           // Si no hay cache y es imagen, devolver icon por defecto
           if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) {
-            return caches.match('/bellasalon/icons/icon-192x192.png');
+            return caches.match('/kirynailssalon/icons/icon-192x192.png');
           }
           return new Response('Error de red', { status: 408 });
         });
@@ -138,6 +138,6 @@ self.addEventListener('message', event => {
   }
 });
 
-console.log('✅ Service Worker configurado para Salon bella');
+console.log('✅ Service Worker configurado para Kiry\'s nail salón');
 console.log('📦 Cache:', CACHE_NAME);
 console.log('📄 Archivos a cachear:', urlsToCache.length);
