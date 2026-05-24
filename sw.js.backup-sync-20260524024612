@@ -1,6 +1,6 @@
 // sw.js - Service Worker para Kiry\'s nail salón
 
-const CACHE_NAME = 'kirynailssalon-v29';
+const CACHE_NAME = 'kirynailssalon-v25';
 const urlsToCache = [
   '/kirynailssalon/',
   '/kirynailssalon/index.html',
