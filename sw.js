@@ -1,6 +1,6 @@
 // sw.js - Service Worker para Kiry\'s nail salón
 
-const CACHE_NAME = 'kirynailssalon-v29';
+const CACHE_NAME = 'kirynailssalon-v47';
 const urlsToCache = [
   '/kirynailssalon/',
   '/kirynailssalon/index.html',
@@ -17,7 +17,14 @@ const urlsToCache = [
   '/kirynailssalon/icons/icon-152x152.png',
   '/kirynailssalon/icons/icon-192x192.png',
   '/kirynailssalon/icons/icon-384x384.png',
-  '/kirynailssalon/icons/icon-512x512.png'
+  '/kirynailssalon/icons/icon-512x512.png',
+  '/kirynailssalon/vendor/react.production.min.js',
+  '/kirynailssalon/vendor/react-dom.production.min.js',
+  '/kirynailssalon/vendor/babel.min.js',
+  '/kirynailssalon/vendor/bcrypt.min.js',
+  '/kirynailssalon/vendor/tailwind-browser.js',
+  '/kirynailssalon/vendor/lucide/lucide.css',
+  '/kirynailssalon/vendor/lucide/lucide.woff2'
 ];
 
 // ============================================
